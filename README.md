@@ -4,4 +4,4 @@
 - These Projects help me to learn react so i hope it'll help others as well
 
 ## To create a New React App
-  - npm create vite@latest
+  ~ npm create vite@latest
