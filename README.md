@@ -82,30 +82,30 @@
         export default App;
       ```
     - By using Memo
- ```
-import {useState} from 'react';
-import React,{memo} from 'react';
-
-function App(){
-  const [title,setTitle] = useState("My name is : Shubham");
-  function updateTitle(){
-    setTitle("My name is : "+Math.random());
-  }
-  
-  return <div>   
-    <button onClick={updateTitle}>Click here to change the name</button>    
-    <Header title={title}></Header>
-    <Header title="Her name is : Riya"></Header>
-    <Header title="Her name is : Saurabh"></Header>
-    <Header title="Her name is : nona"></Header>
-  </div>
-}
-
-const Header = memo(({title})=>{
-  return <div>
-    {title}
-  </div>
-})
-
-export default App;
-```
+      ```
+        import {useState} from 'react';
+        import React,{memo} from 'react';
+        
+        function App(){
+          const [title,setTitle] = useState("My name is : Shubham");
+          function updateTitle(){
+            setTitle("My name is : "+Math.random());
+          }
+          
+          return <div>   
+            <button onClick={updateTitle}>Click here to change the name</button>    
+            <Header title={title}></Header>
+            <Header title="Her name is : Riya"></Header>
+            <Header title="Her name is : Saurabh"></Header>
+            <Header title="Her name is : nona"></Header>
+          </div>
+        }
+        
+        const Header = memo(({title})=>{
+          return <div>
+            {title}
+          </div>
+        })
+        
+        export default App;
+     ```
