@@ -7,7 +7,7 @@
 - `npm create vite@latest`
 
 # React
-- ##CreateTodo Components 
+- ## CreateTodo Components 
 ```
     - Simply just create a funcion and then return a div inside it.
     - We can do some other stuff if its necessary but right now its not needed that why we didn't do it
