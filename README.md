@@ -6,7 +6,7 @@
 ## To create a New React App
 - `npm create vite@latest`
 
-# React
+# About React
 - ## CreateTodo Components 
 ```
     - Simply just create a funcion and then return a div inside it.
