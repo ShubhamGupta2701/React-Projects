@@ -49,38 +49,38 @@
 - In React, Even if a small component Re-Renders whole app re-renders and create problems in large scale applications
 - To overcome it we have 2 solutions
     - Make the lowest component re-render itself by providing it, seperate updating state
-     ```
-import {useState} from 'react';
-import React from 'react';
-
-function App(){
-  return <>   
-    <FirstHeader />
-    <Header title="Her name is : Riya"></Header>
-  </>
-}
-
-function FirstHeader(){
-  const [title,setTitle] = useState("My name is : Shubham");
-  // Either we can use empty div or react.fragment div
-  function updateTitle(){
-    setTitle("My name is : "+Math.random());
-  }
-  
-  return <div>
-    <button onClick={updateTitle}>Click here to change the name</button>    
-    <Header title={title}></Header>
-  </div>
-}
-
-function Header({title}){
-  return <div>
-      {title}
-    </div>
-}
-
-export default App;
-```
+      ```
+      import {useState} from 'react';
+        import React from 'react';
+        
+        function App(){
+          return <>   
+            <FirstHeader />
+            <Header title="Her name is : Riya"></Header>
+          </>
+        }
+        
+        function FirstHeader(){
+          const [title,setTitle] = useState("My name is : Shubham");
+          // Either we can use empty div or react.fragment div
+          function updateTitle(){
+            setTitle("My name is : "+Math.random());
+          }
+          
+          return <div>
+            <button onClick={updateTitle}>Click here to change the name</button>    
+            <Header title={title}></Header>
+          </div>
+        }
+        
+        function Header({title}){
+          return <div>
+              {title}
+            </div>
+        }
+        
+        export default App;
+      ```
     - By using Memo
  ```
 import {useState} from 'react';
