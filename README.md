@@ -32,7 +32,7 @@
 ```
                  
 
-- ##Hocks
+- ## Hocks
 ```
     - useEffect()
         - React provide use multiple hocks to enable us to perform some particular operations optimally
