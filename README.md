@@ -21,7 +21,7 @@
             }
 ```   
 
- - ## Props
+- ## Props
 ```
     - parameters
     
@@ -29,16 +29,17 @@
         - We can share anything as props even functions itself can work as Props
         - Primarly props are passes from parent to child but some times it may passes from child to parent which is a bad and ugly approach
         - To avoid it, we use hocks
-
+```
                  
 
-    -  ##Hocks
-        - useEffect()
-            - React provide use multiple hocks to enable us to perform some particular operations optimally
-            - useEffect() hock is one of them, using this we can set the effect upon which some particular operations can work
-            - useState()  
-                - This hock is one of the most used hocks
-                - it used to change or update the state of my component 
-                - const [_state_name_ , _setState_name] = useState("either it can be empty", or_we can initialize it by something);
-                - we use this to update the state and go to previous state
+- ##Hocks
+```
+    - useEffect()
+        - React provide use multiple hocks to enable us to perform some particular operations optimally
+        - useEffect() hock is one of them, using this we can set the effect upon which some particular operations can work
+        - useState()  
+            - This hock is one of the most used hocks
+            - it used to change or update the state of my component 
+            - const [_state_name_ , _setState_name] = useState("either it can be empty", or_we can initialize it by something);
+            - we use this to update the state and go to previous state
 ```
