@@ -48,12 +48,8 @@
 
 - In React, Even if a small component Re-Renders whole app re-renders and create problems in large scale applications
 - To overcome it we have 2 solutions
-    1. Make the lowest component re-render itself by providing it, seperate updating state
-    2. By using Memo
- 
-- 1.
-```
-
+    - Make the lowest component re-render itself by providing it, seperate updating state
+     ```
 import {useState} from 'react';
 import React from 'react';
 
@@ -85,8 +81,8 @@ function Header({title}){
 
 export default App;
 ```
-- 2.
-```
+    - By using Memo
+ ```
 import {useState} from 'react';
 import React,{memo} from 'react';
 
