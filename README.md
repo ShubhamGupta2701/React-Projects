@@ -43,3 +43,73 @@
             - const [_state_name_ , _setState_name] = useState("either it can be empty", or_we can initialize it by something);
             - we use this to update the state and go to previous state
 ```
+
+## Minimize Re-Rendering
+
+- In React, Even if a small component Re-Renders whole app re-renders and create problems in large scale applications
+- To overcome it we have 2 solutions
+    1. Make the lowest component re-render itself by providing it, seperate updating state
+    2. By using Memo
+ 
+- 1.
+```
+
+import {useState} from 'react';
+import React from 'react';
+
+function App(){
+  return <>   
+    <FirstHeader />
+    <Header title="Her name is : Riya"></Header>
+  </>
+}
+
+function FirstHeader(){
+  const [title,setTitle] = useState("My name is : Shubham");
+  // Either we can use empty div or react.fragment div
+  function updateTitle(){
+    setTitle("My name is : "+Math.random());
+  }
+  
+  return <div>
+    <button onClick={updateTitle}>Click here to change the name</button>    
+    <Header title={title}></Header>
+  </div>
+}
+
+function Header({title}){
+  return <div>
+      {title}
+    </div>
+}
+
+export default App;
+```
+- 2.
+```
+import {useState} from 'react';
+import React,{memo} from 'react';
+
+function App(){
+  const [title,setTitle] = useState("My name is : Shubham");
+  function updateTitle(){
+    setTitle("My name is : "+Math.random());
+  }
+  
+  return <div>   
+    <button onClick={updateTitle}>Click here to change the name</button>    
+    <Header title={title}></Header>
+    <Header title="Her name is : Riya"></Header>
+    <Header title="Her name is : Saurabh"></Header>
+    <Header title="Her name is : nona"></Header>
+  </div>
+}
+
+const Header = memo(({title})=>{
+  return <div>
+    {title}
+  </div>
+})
+
+export default App;
+```
