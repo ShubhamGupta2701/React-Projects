@@ -33,6 +33,7 @@
                  
 
 - ## Hocks
+  : Hooks are functions with starting from 'use' and they let us to perform some functionality or operations on the react state
 ```
     - useEffect()
         - React provide use multiple hocks to enable us to perform some particular operations optimally
@@ -109,3 +110,61 @@
         
         export default App;
       ```
+
+## Wrapper Component 
+  - These are the components that takes children and renders them inside 
+  - These can used to give the basic overview of the components and render data which we pass through them 
+
+  - ugly way and not so good way to create a wrapper is :
+    ```
+    function App(){
+      return <div>
+        <CardWrapper innerComponent={<TextComponent/>}/>
+        <CardWrapper innerComponent={<h1>Hi there</h1>}/>
+      </div>
+    }
+
+    function TextComponent(){
+      return <>
+        Hello there, Shubham this side!
+      </>
+    }
+
+    function CardWrapper({innerComponent}){
+      return <div style={{border:"2px solid black",padding:"20px",margin:"15px"}}>
+        {innerComponent}
+      </div>
+    }
+
+    export default App;
+
+    ```
+
+  - Actual way and clean way to create a wrapper component is :
+    ```
+    function App(){
+      return <div>
+        {/*  this is how a wrapper should be */}
+        <CardWrapper>
+          <TextComponent/>   
+        </CardWrapper>
+        <CardWrapper>
+          Hi, mza toh aa rha h seekhne mai ye sb
+        </CardWrapper>
+      </div>
+    }
+
+    function TextComponent(){
+      return <>
+        Hello there, Shubham this side!
+      </>
+    }
+
+    function CardWrapper({children}){
+      return <div style={{border:"2px solid black",padding:"20px",margin:"15px"}}>
+        {children}
+      </div>
+    }
+
+    export default App;
+    ```
