@@ -33,7 +33,8 @@
                  
 
 - ## Hocks
-  : Hooks are functions with starting from 'use' and they let us to perform some functionality or operations on the react state
+  - Hooks are functions with starting from 'use' and they let us to perform some functionality or operations on the react state
+  - We can also create our own hooks known as Custom hooks
 ```
     - useEffect()
         - React provide use multiple hocks to enable us to perform some particular operations optimally
