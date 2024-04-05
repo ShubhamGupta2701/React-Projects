@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //My_mongoose_url is mongoose url to connect the db with my backend
 
-// mongodb+srv://lucifer:<password>@cluster0.5yvhitx.mongodb.net/
+// mongodb+srv://account:<password>@cluster0.5yvhitx.mongodb.net/
 mongoose.connect("mongodb+srv://account:<password>@cluster0.5yvhitx.mongodb.net/")
 
 const todoSchema = new mongoose.Schema({
