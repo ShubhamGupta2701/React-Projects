@@ -35,13 +35,13 @@
 - ## Hocks
   - Hooks are functions with starting from 'use' and they let us to perform some functionality or operations on the react state
   - Some Common and most used Hooks in React are :
-    - useState()
-    - useEffect()
-    - useCallback()
-    - useMemo()
+    - useState() - to create states which help us to understand the flow of the components and react
+    - useEffect() - to perform some operation when a spefic condition or state variable change
+    - useCallback() - when we want our callback run for once only when a spectified condition meets(state variable)
+    - useMemo() - to store the preivous value of the state or component and use it whenever a particular state variable change
     - useRef()
     - useContext()
-    
+    - Custom Hooks - when we want to move or use our hook states outside any component and hooks them we create custom hooks and assign the same value of hooks to it and use it for the same purpose.
 ```
     - useEffect()
         - React provide use multiple hocks to enable us to perform some particular operations optimally
