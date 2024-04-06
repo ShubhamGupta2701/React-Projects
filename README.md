@@ -176,3 +176,11 @@
 
     export default App;
     ```
+
+
+## React Routing
+- use library `react-router-dom`
+- to creates routes 
+- Routes are the bridges between different components
+- usually use when we want to go to some other page by clicking on something
+- It tells the behaviour of our app by letting us go from one component to another
