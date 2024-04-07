@@ -184,3 +184,29 @@
 - Routes are the bridges between different components
 - usually use when we want to go to some other page by clicking on something
 - It tells the behaviour of our app by letting us go from one component to another
+```
+import {BrowserRouter,Routes,Route,useNavigate} from 'react-router-dom'
+import Dashboard from './components/Dashboard'
+import Login from './components/Login'
+import Home from './components/Home'
+import Appbar from './components/Appbar'
+
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Appbar/>
+        <Routes>
+          <Route path='/dashboard' element=<Dashboard/> />
+          <Route path='/' element=<Home/> />
+          <Route path='/login' element=<Login/> />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App;
+
+```
