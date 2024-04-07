@@ -39,6 +39,7 @@
     - useEffect() - to perform some operation when a spefic condition or state variable change
     - useCallback() - when we want our callback run for once only when a spectified condition meets(state variable)
     - useMemo() - to store the preivous value of the state or component and use it whenever a particular state variable change
+    - useReduce() - to handle the state management in react - old way - if not using redux toolkit or recoil then use this
     - useRef()
     - useContext()
     - Custom Hooks - when we want to move or use our hook states outside any component and hooks them we create custom hooks and assign the same value of hooks to it and use it for the same purpose.
