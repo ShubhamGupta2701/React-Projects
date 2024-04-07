@@ -210,3 +210,48 @@ function App() {
 export default App;
 
 ```
+## Prop Drilling
+
+- It is a term when their is a mesh of props passing through the DOM tree
+- When we declare a state at some top or some other level and it needs to other component
+- And we pass to all the componts related to that components in hope to reach there.
+- And in doing so it creates a mesh
+```
+// Prop driiling way
+
+import { useState } from "react";
+
+
+function PropDrilling(){
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <Count count={count} setCount={setCount}/>
+        </div>
+    );
+
+}
+
+function Count({count,setCount}){
+    return <div>
+        <CountRender count={count}/>
+        <Buttons count={count} setCount = {setCount}/>
+    </div>
+}
+function CountRender({count}){
+    return <div>
+        {count}
+    </div>
+}
+
+function Buttons({count,setCount}){
+    return <div>
+        <button onClick={()=>{setCount(count+1)}}>Increase</button>
+        <button onClick={()=>{setCount(count-1)}}>Decrease</button>
+    </div>
+}
+
+
+export default PropDrilling;
+```
