@@ -255,3 +255,65 @@ function Buttons({count,setCount}){
 
 export default PropDrilling;
 ```
+
+## Context API
+
+- It helps us in getting rid of the prop drilling problem
+- we create a variable in which we store our state variable `export const CountContext = createContext({count, setCount})`
+- then we import this varibale to our core component and wrap it with this.
+- And pass values to this wrapper component only
+- after that we just need to create a variables to use them `const {count, setCount} = useContext(CountContext)`
+|App.jsx file or core file|
+```
+// Context API  way
+
+import { useState,useContext } from "react";
+import { CountContext } from "./conextAPI";
+
+function PropDrilling(){
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <CountContext.Provider value={{count,setCount}}>
+                <Count/>          
+            </CountContext.Provider>
+            
+        </div>
+    );
+
+}
+
+function Count(){
+    return <div>
+        <CountRender/>
+        <Buttons/>
+    </div>
+}
+function CountRender(){
+    const count = useContext(CountContext);
+    return <div>
+        {count}
+    </div>
+}
+
+function Buttons(){
+    const {count,setCount} = useContext(CountContext);
+    return <div>
+        <button onClick={()=>{setCount(count+1)}}>Increase</button>
+        <button onClick={()=>{setCount(count-1)}}>Decrease</button>
+    </div>
+}
+
+
+export default PropDrilling;
+```
+
+|Context API Creation file|
+```
+import { createContext } from "react";
+
+export const CountContext = createContext({
+    count,setCount
+});
+```
