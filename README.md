@@ -263,8 +263,10 @@ export default PropDrilling;
 - then we import this varibale to our core component and wrap it with this.
 - And pass values to this wrapper component only
 - after that we just need to create a variables to use them `const {count, setCount} = useContext(CountContext)`
-- App.jsx file or core file
+
 ```
+// App.jsx file or core file
+
 // Context API  way
 
 import { useState,useContext } from "react";
@@ -309,8 +311,10 @@ function Buttons(){
 export default PropDrilling;
 ```
 
-- Context API Creation file
+ 
 ```
+// Context API Creation file
+
 import { createContext } from "react";
 
 export const CountContext = createContext({
