@@ -9,4 +9,8 @@
     - framework have predefined components and limit the customization of the interface or functionality
     - on the other hand library gives us the more control over customization
 
+<<<<<<< HEAD
 - `React (client side rendering) && Nextjs (client side as well as server side rendering)`
+=======
+- React (client side rendering) && Nextjs (client side as well as server side rendering) 
+>>>>>>> 1dcde66d9c6daf589debc1a912fe99a9d62420ed
