@@ -39,14 +39,11 @@
     - useEffect() - to perform some operation when a spefic condition or state variable change
     - useCallback() - when we want our callback run for once only when a spectified condition meets(state variable)
     - useMemo() - to store the preivous value of the state or component and use it whenever a particular state variable change
-<<<<<<< HEAD
-=======
     - useReduce() - to handle the state management in react - old way - if not using redux toolkit or recoil then use this
->>>>>>> 1dcde66d9c6daf589debc1a912fe99a9d62420ed
     - useRef()
     - useContext()
     - Custom Hooks - when we want to move or use our hook states outside any component and hooks them we create custom hooks and assign the same value of hooks to it and use it for the same purpose.
-```
+    ```
     - useEffect()
         - React provide use multiple hocks to enable us to perform some particular operations optimally
         - useEffect() hock is one of them, using this we can set the effect upon which some particular operations can work
@@ -55,7 +52,7 @@
             - it used to change or update the state of my component 
             - const [_state_name_ , _setState_name] = useState("either it can be empty", or_we can initialize it by something);
             - we use this to update the state and go to previous state
-```
+    ```
 
 ## Minimize Re-Rendering
 
